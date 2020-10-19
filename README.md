@@ -1,24 +1,27 @@
-# README
+# RUBY AUTH EXAMPLE WITH AUTHLOGIC
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+1.  Install Rails at the command prompt if you haven't yet:
 
-* Ruby version
+        $ git clone https://github.com/nytro04/rails_auth.git
 
-* System dependencies
+2.  Change directory to `rails_auth`
 
-* Configuration
+        $ cd rails_auth
 
-* Database creation
+3.  Install application dependencies:
 
-* Database initialization
+        $ bundle install
 
-* How to run the test suite
+4.  Create databases:
 
-* Services (job queues, cache servers, search engines, etc.)
+        $ rails db:create
 
-* Deployment instructions
+5.  Migrate generated tables:
 
-* ...
+        $ rails db:migrate
+
+6.  start the web server:
+
+        $ rails s
