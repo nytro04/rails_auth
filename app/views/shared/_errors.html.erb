@@ -2,9 +2,7 @@
   <div class="row">
     <div class="col-md-5 mx-auto">
       <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <h5>
-          <span>Error while saving file</span>
-        </h5>
+        
         <ul>
           <% object.errors.full_messages.each do |msg| %>
             <li><%= msg  %></li>

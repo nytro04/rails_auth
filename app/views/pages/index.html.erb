@@ -1,9 +1,14 @@
 <div class="text-center">
   <h1 class="display-3 mt-5" >Welcome to the Auth Page</h1>
-  <p>Sign up to get started.</p>
-  <p>
-    <%= link_to new_user_path, class: 'btn btn-primary btn-lg' do %>
-      Sign Up &raquo;
-    <% end %>
-  </p>
+  <% if current_user %>
+    <p>Welcome <%= current_user.email  %></p>
+  <% else %>
+    <div>
+      <p>
+        <%= link_to new_user_path, class: 'btn btn-primary btn-lg' do %>
+          Sign Up &raquo;
+        <% end %>
+      </p>
+    </div>
+  <% end %>
 </div>
