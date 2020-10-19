@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-
+gem "scrypt", "~> 3.0"
 gem 'authlogic', '~> 6.2'
 
 group :development, :test do

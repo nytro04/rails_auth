@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(users_params)
+    @user = User.new(users_params.to_h)
 if @user.save
   flash[:success] = "Account successfully created"
 redirect_to root_path
@@ -16,7 +16,7 @@ end
   private
 
   def users_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password)
   end
 
 end
