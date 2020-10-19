@@ -1,17 +1,23 @@
-<div class="mv-5">Sign In</div>
+<h1 class="my-5 text-center display-3">Sign In</h1>
 <%= form_for @user_session do |f| %>
   <%= render 'shared/errors', object: @user_session %>
-  <div class="form-group">
-    <%= f.label :email %>
-    <%= f.email_field :email, class: 'form-control' %>
+  <div class="row">
+    <div class="col-md-5 mx-auto offset-sm-1 ">
+      <div class="justify-content-center">
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password %>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :remember_me %>
+          <%= f.check_box :remember_me %>
+        </div>
+        <%= f.submit "Log in!", class: 'btn btn-primary px-5' %>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :password %>
-    <%= f.password_field :password, class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :remember_me %>
-    <%= f.check_box :remember_me %>
-  </div>
-  <%= f.submit "Log in!", class: 'btn btn-primary btn-lg' %>
 <% end %>
